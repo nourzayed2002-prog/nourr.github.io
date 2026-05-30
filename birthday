@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 25th Birthday ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#333;
+text-align:center;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+h1{
+font-size:3rem;
+margin-bottom:20px;
+color:#d46a92;
+}
+
+.subtitle{
+font-size:1.2rem;
+max-width:700px;
+line-height:1.8;
+}
+
+.btn{
+margin-top:30px;
+padding:15px 30px;
+background:#d46a92;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-size:1rem;
+}
+
+section{
+padding:80px 20px;
+}
+
+.memory{
+max-width:800px;
+margin:auto;
+}
+
+.memory h2{
+color:#d46a92;
+margin-bottom:20px;
+}
+
+.question{
+background:#fafafa;
+padding:25px;
+border-radius:20px;
+max-width:600px;
+margin:20px auto;
+}
+
+input{
+padding:12px;
+width:80%;
+margin-top:15px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+.final{
+display:none;
+padding:80px 20px;
+}
+
+.final h2{
+font-size:2.5rem;
+color:#d46a92;
+margin-bottom:20px;
+}
+
+.heart{
+font-size:3rem;
+animation:beat 1s infinite;
+}
+
+@keyframes beat{
+50%{transform:scale(1.2);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>Happy 25th Birthday ❤️</h1>
+
+<p class="subtitle">
+Today is all about you.
+I wanted to create something special that could make you smile,
+even if only for a few minutes.
+</p>
+
+<button class="btn" onclick="scrollToQuestions()">
+Start Your Surprise
+</button>
+</div>
+
+<section class="memory">
+<h2>A Little Message For You</h2>
+
+<p>
+You have been through so much lately,
+and I know things haven't always been easy.
+I just wanted you to know that you are loved,
+appreciated and deeply special to me.
+I hope this birthday brings you happiness,
+peace and everything your heart deserves.
+❤️
+</p>
+</section>
+
+<section>
+<h2 style="color:#d46a92;">Answer These Questions</h2>
+
+<div class="question">
+<p>What is my favorite color?</p>
+<input id="q1">
+</div>
+
+<div class="question">
+<p>Who loves you the most?</p>
+<input id="q2">
+</div>
+
+<button class="btn" onclick="checkAnswers()">
+Unlock Final Surprise
+</button>
+</section>
+
+<div class="final" id="final">
+<div class="heart">❤️</div>
+
+<h2>You Did It!</h2>
+
+<p style="max-width:700px;margin:auto;line-height:2;">
+Happy Birthday, my love.
+
+No matter how many birthdays pass,
+I hope I get to celebrate every single one with you.
+
+Thank you for being you.
+
+I love you more than words can explain.
+❤️
+</p>
+</div>
+
+<script>
+function scrollToQuestions(){
+window.scrollTo({
+top:900,
+behavior:'smooth'
+});
+}
+
+function checkAnswers(){
+
+let q1=document.getElementById("q1").value.toLowerCase();
+let q2=document.getElementById("q2").value.toLowerCase();
+
+if(q1 && q2){
+document.getElementById("final").style.display="block";
+document.getElementById("final").scrollIntoView({
+behavior:"smooth"
+});
+}
+else{
+alert("Answer the questions first ❤️");
+}
+}
+</script>
+
+</body>
+</html>
